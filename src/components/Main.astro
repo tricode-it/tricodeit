@@ -1,21 +1,84 @@
 ---
-import React from 'react';
 import TextAnimate from './ui/TextAnimate/TextAnimate.jsx';
 import ButtonBackgroundShine from "./ui/button/Button.jsx"
 ---
 
-
-  <main class="mx-32 w-fit mt-32 flex flex-row gap-80 ">
-    <div class="flex flex-col gap-4">
-      <h1 class="text-5xl font-normal text-gray-800">Intenta Codificarlo <b class="text-orange-400">__</b></h1>
-      <h1 class="text-6xl font-semibold">Trabaja con Nosotros</h1>
-      <TextAnimate client:load />
-      <div class="mt-10">
-          <ButtonBackgroundShine />
+<main class="mx-4 sm:mx-10 lg:mx-20 mt-10 sm:mt-20 flex flex-col lg:flex-row gap-10 lg:gap-20 relative z-0">
+  <div class="flex flex-col gap-4">
+    <h1 class="text-4xl sm:text-5xl font-extralight text-gray-800">Intenta Codificarlo <b class="text-[#000000]">__</b></h1>
+    <h1 class="text-5xl sm:text-6xl font-semibold text-shadow">
+      <span>Trabaja con</span>
+      <span class="text-[#ffe600] whitespace-nowrap text-shadow"> Nosotros</span>
+    </h1>
+    <TextAnimate client:load />
+    <div class="mt-6 sm:mt-10">
+      <ButtonBackgroundShine />
+    </div>
+  </div>
+  <div class="flex justify-center lg:justify-start">
+    <div class="image-wrapper">
+      <div class="image-container">
+        <img class="w-48 sm:w-72 lg:w-96" src="/Tricode-logo.webp" alt="Logo TriCode">
       </div>
     </div>
-    <div class="">
-        <img class="w-96" src="/Tricode-logo.webp" alt="Logo TriCode">
-    </div>
-  </main>
-</body>
+  </div> 
+</main>
+
+<style>
+  @font-face {
+    font-family: 'Gilroy';
+    src: url(/FontsFree-Net-Gilroy-ExtraBold.ttf);
+  }
+
+  .font-nosotros {
+    font-family: 'Gilroy';
+  }
+
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .image-wrapper {
+    perspective: 1500px; 
+  }
+
+  .image-container {
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
+    position: relative;
+    display: inline-block;
+  }
+
+  .image-container img {
+    display: block;
+    transform-style: preserve-3d;
+    box-shadow: 0 0 20px 10px #ffe600; 
+    transition: box-shadow 0.3s ease; 
+  }
+
+  .image-container:hover img {
+    box-shadow: 0 0 30px 15px #ffe600; 
+  }
+
+  @media (max-width: 768px) {
+  .image-wrapper {
+    display: none; 
+  }
+}
+</style>
+
+<script>
+  document.addEventListener('mousemove', (e) => {
+  const imageContainer = document.querySelector('.image-container') as HTMLElement;
+
+  if (!imageContainer) return;
+
+  const { clientX: mouseX, clientY: mouseY } = e;
+  const { offsetWidth: width, offsetHeight: height } = imageContainer;
+
+  const x = ((mouseX / window.innerWidth) - 0.5) * 20; 
+  const y = ((mouseY / window.innerHeight) - 0.5) * -20; 
+
+  imageContainer.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`;
+});
+</script>

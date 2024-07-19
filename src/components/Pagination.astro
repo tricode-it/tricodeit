@@ -1,0 +1,103 @@
+<section class="pagination-dots absolute bottom-0 left-0 mb-4 ml-4 flex space-x-4">
+    <span class="dot" data-section="home"></span>
+    <span class="dot" data-section="services"></span>
+    <span class="dot" data-section="about"></span>
+    <span class="dot" data-section="projects"></span>
+</section>
+
+<style>
+    .pagination-dots {
+        display: flex;
+        flex-direction: row; /* Horizontally align items */
+        align-items: center;
+        bottom: 0;
+        left: 0;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        z-index: 1000; /* Ensure it appears above other content */
+    }
+
+    .dot {
+        width: 16px; /* Increased size */
+        height: 16px; /* Increased size */
+        border-radius: 50%;
+        background-color: #000000;
+        transition: background-color 0.3s, width 0.3s, height 0.3s;
+    }
+
+    .dot.active {
+        background-color: #ffe600;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 640px) { /* Mobile screens */
+        .pagination-dots {
+            margin-left: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .dot {
+            width: 14px; /* Adjusted size */
+            height: 14px; /* Adjusted size */
+        }
+    }
+
+    @media (min-width: 641px) and (max-width: 1024px) { /* Tablets */
+        .pagination-dots {
+            margin-left: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .dot {
+            width: 16px; /* Adjusted size */
+            height: 16px; /* Adjusted size */
+        }
+    }
+
+    @media (min-width: 1025px) { /* Desktops */
+        .pagination-dots {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .dot {
+            width: 16px; /* Adjusted size */
+            height: 16px; /* Adjusted size */
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const dots = document.querySelectorAll('.pagination-dots .dot');
+
+        function updateActiveDot() {
+            const url = window.location.pathname; 
+            let activeDotIndex = -1;
+
+            switch (url) {
+                case '/':
+                    activeDotIndex = 0;
+                    break;
+                case '/services':
+                    activeDotIndex = 1;
+                    break;
+                case '/about':
+                    activeDotIndex = 2;
+                    break;
+                case '/projects':
+                    activeDotIndex = 3;
+                    break;
+                default:
+                    activeDotIndex = -1;
+                    break;
+            }
+
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === activeDotIndex);
+            });
+        }
+
+        updateActiveDot(); 
+    });
+</script>
