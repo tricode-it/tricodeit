@@ -8,18 +8,18 @@
 <style>
     .pagination-dots {
         display: flex;
-        flex-direction: row; /* Horizontally align items */
+        flex-direction: row; 
         align-items: center;
         bottom: 0;
         left: 0;
         margin-bottom: 1rem;
         margin-left: 1rem;
-        z-index: 1000; /* Ensure it appears above other content */
+        z-index: 1000; 
     }
 
     .dot {
-        width: 16px; /* Increased size */
-        height: 16px; /* Increased size */
+        width: 16px; 
+        height: 16px;
         border-radius: 50%;
         background-color: #000000;
         transition: background-color 0.3s, width 0.3s, height 0.3s;
@@ -29,40 +29,39 @@
         background-color: #ffe600;
     }
 
-    /* Responsive adjustments */
-    @media (max-width: 640px) { /* Mobile screens */
+    @media (max-width: 640px) { 
         .pagination-dots {
             margin-left: 0.5rem;
             margin-bottom: 0.5rem;
         }
 
         .dot {
-            width: 14px; /* Adjusted size */
-            height: 14px; /* Adjusted size */
+            width: 14px; 
+            height: 14px; 
         }
     }
 
-    @media (min-width: 641px) and (max-width: 1024px) { /* Tablets */
+    @media (min-width: 641px) and (max-width: 1024px) { 
         .pagination-dots {
             margin-left: 1rem;
             margin-bottom: 1rem;
         }
 
         .dot {
-            width: 16px; /* Adjusted size */
-            height: 16px; /* Adjusted size */
+            width: 16px;
+            height: 16px; 
         }
     }
 
-    @media (min-width: 1025px) { /* Desktops */
+    @media (min-width: 1025px) {
         .pagination-dots {
             margin-left: 1.5rem;
             margin-bottom: 1.5rem;
         }
 
         .dot {
-            width: 16px; /* Adjusted size */
-            height: 16px; /* Adjusted size */
+            width: 16px; 
+            height: 16px; 
         }
     }
 </style>
