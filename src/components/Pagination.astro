@@ -1,4 +1,4 @@
-<section class="pagination-dots absolute bottom-0 left-0 mb-4 ml-4 flex space-x-4">
+<section class="pagination-dots fixed bottom-0 left-0 mb-4 ml-4 flex space-x-4">
     <span class="dot" data-section="home"></span>
     <span class="dot" data-section="services"></span>
     <span class="dot" data-section="about"></span>
@@ -11,6 +11,7 @@
         display: flex;
         flex-direction: row; 
         align-items: center;
+        position: fixed;
         bottom: 0;
         left: 0;
         margin-bottom: 1rem;
@@ -28,42 +29,6 @@
 
     .dot.active {
         background-color: #ffe600;
-    }
-
-    @media (max-width: 640px) { 
-        .pagination-dots {
-            margin-left: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .dot {
-            width: 14px; 
-            height: 14px; 
-        }
-    }
-
-    @media (min-width: 641px) and (max-width: 1024px) { 
-        .pagination-dots {
-            margin-left: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .dot {
-            width: 16px;
-            height: 16px; 
-        }
-    }
-
-    @media (min-width: 1025px) {
-        .pagination-dots {
-            margin-left: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .dot {
-            width: 16px; 
-            height: 16px; 
-        }
     }
 </style>
 
@@ -89,7 +54,7 @@
                     activeDotIndex = 3;
                     break;
                 case '/contact':
-                    activeDotIndex = 4
+                    activeDotIndex = 4;
                     break;
                 default:
                     activeDotIndex = -1;
