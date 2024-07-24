@@ -1,15 +1,22 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import NavBar from "../components/NavBar.astro"
-import Main from "../components/Main.astro"
-import Pagination from "../components/Pagination.astro"
-import Mainv2 from "../components/Mainv2.astro"
+import Layout from "../layouts/Layout.astro";
+import NavBar from "../components/NavBar.astro";
+import Main from "../components/Main.astro";
+import Canva from "../components/ui/Canva.astro";
+import Cards from "../components/ui/Cards.astro";
+import CanvaFlip from "../components/ui/CanvaFlip.astro";
+import TeamSection from "../components/TeamSection.astro";
 ---
 
-<Layout title="TriCode - Home">
-    <NavBar />
-    <Mainv2 />
-    
+<Layout title="Tricode - Home">
+  <NavBar />
+  <Main />
+  <div class="felx flex-col">
+    <Canva />
+    <main class="h-fit bg-yellow-400">
+      <Cards />
+    </main>
+    <CanvaFlip />
+  </div>
+  <TeamSection />
 </Layout>
-
-
