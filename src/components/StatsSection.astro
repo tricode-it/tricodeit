@@ -1,0 +1,91 @@
+<div class="flex flex-col items-center justify-center">
+  <div class="flex flex-col items-center mx-auto my-16">
+    <div class="m-auto grid w-full grid-cols-3 lg:grid-cols-4">
+      <div class="flex flex-col items-center">
+        <h3
+          class="text-5xl font-extrabold leading-tight flextext-center text-grey-900"
+        >
+          +<span id="countto1" data-count-to="30"></span>
+        </h3>
+        <p
+          class="text-base font-medium leading-7 text-center text-dark-grey-600"
+        >
+          Proyectos
+        </p>
+      </div>
+      <div class="flex flex-col items-center">
+        <h3
+          class="text-5xl font-extrabold leading-tight text-center text-dark-grey-900"
+        >
+          +<span id="countto2" data-count-to="124"></span>
+        </h3>
+        <p
+          class="text-base font-medium leading-7 text-center text-dark-grey-600"
+        >
+          Seguidores!
+        </p>
+      </div>
+      <div class="flex flex-col items-center">
+        <h3
+          class="text-5xl font-extrabold leading-tight text-center text-dark-grey-900"
+        >
+          +<span id="countto4" data-count-to="1500"></span>
+        </h3>
+        <p
+          class="text-base font-medium leading-7 text-center text-dark-grey-600"
+        >
+          Web Visitantes diarios
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function animateCount(
+    element: HTMLElement,
+    start: number,
+    end: number,
+    duration: number,
+    decimalPlaces: number
+  ) {
+    const range = end - start;
+    const startTime = performance.now();
+
+    function step(timestamp: number) {
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const current = start + range * progress;
+      element.textContent = current.toFixed(decimalPlaces);
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  function initCountUp() {
+    const numbers = document.querySelectorAll("[data-count-to]");
+
+    numbers.forEach((number) => {
+      const ID = number.getAttribute("id");
+      const value = number.getAttribute("data-count-to");
+      const decimalPlaces = number.hasAttribute("data-decimal")
+        ? parseInt(number.getAttribute("data-decimal")!)
+        : 0;
+
+      if (ID && value) {
+        animateCount(
+          number as HTMLElement,
+          0,
+          parseFloat(value),
+          2000,
+          decimalPlaces
+        );
+      }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", initCountUp);
+</script>
