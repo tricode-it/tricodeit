@@ -1,94 +1,108 @@
 <div class="flex items-center justify-center min-h-screen w-screen p-4">
-    <div class="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
-        <h2 class="mb-6 text-2xl font-bold text-center whitespace-nowrap">Contáctanos - <span class="text-[#ffe600] whitespace-nowrap text-shadow">Tricode</span></h2>
-        <form class="space-y-4">
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <div>
-                    <label for="firstName" class="block mb-1 text-sm font-medium text-gray-700">
-                        Nombre
-                    </label>
-                    <input
-                        id="firstName"
-                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
-                        required=""
-                        type="text"
-                        name="firstName"
-                    />
-                </div>
-                <div>
-                    <label for="lastName" class="block mb-1 text-sm font-medium text-gray-700">
-                        Apellido
-                    </label>
-                    <input
-                        id="lastName"
-                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
-                        required=""
-                        type="text"
-                        name="lastName"
-                    />
-                </div>
-            </div>
-            <div>
-                <label for="email" class="block mb-1 text-sm font-medium text-gray-700">
-                    Correo electrónico
-                </label>
-                <input
-                    id="email"
-                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
-                    required=""
-                    type="email"
-                    name="email"
-                />
-            </div>
-            <div>
-                <label for="phone" class="block mb-1 text-sm font-medium text-gray-700">
-                    Teléfono (opcional)
-                </label>
-                <input
-                    id="phone"
-                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
-                    type="tel"
-                    name="phone"
-                />
-            </div>
-            <div>
-                <label for="message" class="block mb-1 text-sm font-medium text-gray-700">
-                    Mensaje
-                </label>
-                <textarea
-                    id="message"
-                    name="message"
-                    rows="4"
-                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
-                    required=""
-                ></textarea>
-            </div>
-            <div>
-                <label for="attachment" class="block mb-1 text-sm font-medium text-gray-700">
-                    Adjunto (opcional)
-                </label>
-                <input
-                    id="attachment"
-                    placeholder="Ingresa un enlace o sube una imagen"
-                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
-                    type="text"
-                    name="attachment"
-                />
-            </div>
-            <div class="flex justify-end">
-                <button
-                    type="submit"
-                    class="px-4 py-2 font-medium text-white bg-yellow-500 rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2"
-                >
-                    Enviar
-                </button>
-            </div>
-        </form>
-    </div>
+  <div class="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
+    <h2 class="mb-6 text-2xl font-bold text-center whitespace-nowrap">
+      Contáctanos - <span class="text-[#ffe600] whitespace-nowrap text-shadow"
+        >Tricode</span>
+    </h2>
+    <form class="space-y-4">
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div>
+          <label
+            for="firstName"
+            class="block mb-1 text-sm font-medium text-gray-700"
+          >
+            Nombre
+          </label>
+          <input
+            id="firstName"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+            required=""
+            type="text"
+            name="firstName"
+          />
+        </div>
+        <div>
+          <label
+            for="lastName"
+            class="block mb-1 text-sm font-medium text-gray-700"
+          >
+            Apellido
+          </label>
+          <input
+            id="lastName"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+            required=""
+            type="text"
+            name="lastName"
+          />
+        </div>
+      </div>
+      <div>
+        <label for="email" class="block mb-1 text-sm font-medium text-gray-700">
+          Correo electrónico
+        </label>
+        <input
+          id="email"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+          required=""
+          type="email"
+          name="email"
+        />
+      </div>
+      <div>
+        <label for="phone" class="block mb-1 text-sm font-medium text-gray-700">
+          Teléfono (opcional)
+        </label>
+        <input
+          id="phone"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+          type="tel"
+          name="phone"
+        />
+      </div>
+      <div>
+        <label
+          for="message"
+          class="block mb-1 text-sm font-medium text-gray-700"
+        >
+          Mensaje
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+          required=""></textarea>
+      </div>
+      <div>
+        <label
+          for="attachment"
+          class="block mb-1 text-sm font-medium text-gray-700"
+        >
+          Adjunto (opcional)
+        </label>
+        <input
+          id="attachment"
+          placeholder="Ingresa un enlace o sube una imagen"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+          type="text"
+          name="attachment"
+        />
+      </div>
+      <div class="flex justify-end">
+        <button
+          type="submit"
+          class="px-4 py-2 font-medium text-white bg-yellow-500 rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2"
+        >
+          Enviar
+        </button>
+      </div>
+    </form>
+  </div>
 </div>
 
 <style>
-    .text-shadow {
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-    }
+  .text-shadow {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  }
 </style>
