@@ -1,84 +1,33 @@
 ---
-import TextAnimate from './ui/TextAnimate/TextAnimate.jsx';
-import { Button } from "./ui/button/Button.jsx"
+import Button1 from "./ui/button/Button1.astro";
+import InfiniteScroll from "./ui/InfiniteScroll.astro";
 ---
 
-<main class="my-20 m-auto max-w-7xl flex flex-col lg:flex-row  gap-20 items-center justify-between z-0">
-  <div class="flex flex-col gap-4">
-    <h1 class="text-4xl sm:text-5xl font-extralight text-gray-800">Intenta Codificarlo <b class="text-black">__</b></h1>
-    <h1 class="text-5xl sm:text-6xl font-semibold text-shadow">
-      <span>Trabaja con</span>
-      <span class="text-[#ffe600] whitespace-nowrap text-shadow shadow-black"> Nosotros</span>
-    </h1>
-    <TextAnimate client:load />
-    <div class="mt-6 sm:mt-10">
-      <Button />
-    </div>
-  </div>
-  <div class="flex justify-center lg:justify-start">
-    <div class="image-wrapper">
-      <div class="image-container">
-        <img class="w-48 sm:w-72 lg:w-96" src="/Tricode-logo.webp" alt="Logo TriCode">
+<section class="pt-24">
+  <div class="px-12 mx-auto max-w-7xl">
+    <div class="w-full mx-auto md:w-11/12 xl:w-9/12 md:text-center">
+      <h1
+        class="mb-8 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight text-center"
+      >
+        <span>Empieza a</span>
+        <span
+          class="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-[#ffe600] to-yellow-400 lg:inline"
+          >Transformar</span
+        >
+        <span>tu presencia en linea</span>
+      </h1>
+      <p
+        class="px-0 mb-8 text-lg text-gray-600 md:text-xl lg:px-24 text-center"
+      >
+        Potencia tu negocio con nuestras soluciones de desarrollo web
+        personalizadas.
+      </p>
+      <div class="m-auto">
+        <InfiniteScroll />
+      </div>
+      <div class="mb-4 flex justify-center space-x-0 md:space-x-2 md:mb-8">
+        <Button1 />
       </div>
     </div>
-  </div> 
-</main>
-
-<style>
-  @font-face {
-    font-family: 'Gilroy';
-    src: url(/FontsFree-Net-Gilroy-ExtraBold.ttf);
-  }
-
-  .font-nosotros {
-    font-family: 'Gilroy';
-  }
-
-  .text-shadow {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-  }
-
-  .image-wrapper {
-    perspective: 1500px; 
-  }
-
-  .image-container {
-    transform-style: preserve-3d;
-    transition: transform 0.1s ease-out;
-    position: relative;
-    display: inline-block;
-  }
-
-  .image-container img {
-    display: block;
-    transform-style: preserve-3d;
-    box-shadow: 0 0 20px 10px #ffe600; 
-    transition: box-shadow 0.3s ease; 
-  }
-
-  .image-container:hover img {
-    box-shadow: 0 0 30px 15px #ffe600; 
-  }
-
-  @media (max-width: 768px) {
-  .image-wrapper {
-    display: none; 
-  }
-}
-</style>
-
-<script>
-  document.addEventListener('mousemove', (e) => {
-  const imageContainer = document.querySelector('.image-container') as HTMLElement;
-
-  if (!imageContainer) return;
-
-  const { clientX: mouseX, clientY: mouseY } = e;
-  const { offsetWidth: width, offsetHeight: height } = imageContainer;
-
-  const x = ((mouseX / window.innerWidth) - 0.5) * 20; 
-  const y = ((mouseY / window.innerHeight) - 0.5) * -20; 
-
-  imageContainer.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`;
-});
-</script>
+  </div>
+</section>
