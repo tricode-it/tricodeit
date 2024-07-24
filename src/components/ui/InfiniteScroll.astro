@@ -1,0 +1,87 @@
+---
+
+---
+
+<div class="wrapper max-w-xl h-16 items-center m-auto justify-items-center">
+  <div
+    class="rounded-xl p-[2px] text-xl item item1 text-center flex justify-center m-auto gap-2 bg-gradient-to-r from-[#ffe600] to-yellow-400"
+  >
+    <i class="bx bxs-store-alt text-2xl"></i>
+    <h1 class="font-bold text-gray-800 drop-shadow-2xl">E-commerce</h1>
+  </div>
+  <div
+    class="rounded-xl p-[2px] text-xl item item2 text-center flex justify-center m-auto gap-2 bg-gradient-to-r from-[#ffe600] to-yellow-400"
+  >
+    <i class="bx bxs-cog text-2xl"></i>
+    <h1 class="font-bold text-gray-800 drop-shadow-2xl">DashBoards</h1>
+  </div>
+  <div
+    class="rounded-xl p-[2px] text-xl item item3 text-center flex justify-center m-auto gap-2 bg-gradient-to-r from-[#ffe600] to-yellow-400"
+  >
+    <i class="bx bxs-book-content text-2xl"></i>
+    <h1 class="font-bold text-gray-800 drop-shadow-2xl">Landing Page</h1>
+  </div>
+  <div
+    class="rounded-xl p-[2px] text-xl item item4 text-center flex justify-center m-auto gap-2 bg-gradient-to-r from-[#ffe600] to-yellow-400"
+  >
+    <i class="bx bx-mobile-vibration text-2xl"></i>
+    <h1 class="font-bold text-gray-800 drop-shadow-2xl">Apps Mobile</h1>
+  </div>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    * {
+      margin: 0;
+    }
+
+    .wrapper {
+      position: relative;
+      margin: 0px auto;
+      overflow: hidden;
+      mask-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1) 20%,
+        rgba(0, 0, 0, 1) 80%,
+        rgba(0, 0, 0, 0)
+      );
+    }
+
+    @keyframes scrollLeft {
+      to {
+        left: -200px;
+      }
+    }
+
+    .item {
+      width: 190px;
+      position: absolute;
+      left: max(calc(200px * 3), 100%);
+      animation-name: scrollLeft;
+      animation-duration: 7s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    .item1 {
+      animation-delay: calc(7s / 4 * (4 - 1) * -1);
+    }
+
+    .item2 {
+      animation-delay: calc(7s / 4 * (4 - 2) * -1);
+    }
+
+    .item3 {
+      animation-delay: calc(7s / 4 * (4 - 3) * -1);
+    }
+
+    .item4 {
+      animation-delay: calc(7s / 4 * (4 - 4) * -1);
+    }
+  </style>
+</div>

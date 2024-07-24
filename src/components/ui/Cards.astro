@@ -1,0 +1,87 @@
+<div class="min-h-screen flex justify-center items-center py-20">
+  <div
+    class="px-4 grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 md:space-y-0"
+  >
+    <a href="">
+      <div
+        class="group max-w-sm bg-white px-3 pt-4 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500 flex flex-col items-center relative"
+      >
+        <h3
+          class="mb-3 text-xl font-extrabold text-black text-center group-hover:blur-sm delay-200"
+        >
+          HeroGym
+        </h3>
+        <div class="relative group-hover:blur-sm delay-200">
+          <img class="w-full rounded-xl" src="/herogym.jpg" alt="heroGym" />
+        </div>
+        <button
+          class="delay-200 ease-in-out group-hover:w-1/2 blur-none group-hover:-translate-y-36 mt-4 text-xl w-1/3 text-black bg-yellow-400 shadow-2xl py-2 rounded-xl font-bold transition-all transform"
+        >
+          Visitar
+        </button>
+      </div>
+    </a>
+    <a href="">
+      <div
+        class="group max-w-sm bg-white px-3 pt-4 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500 flex flex-col items-center relative"
+      >
+        <h3
+          class="mb-3 text-xl font-extrabold text-black text-center group-hover:blur-sm delay-200"
+        >
+          The West Clothes
+        </h3>
+        <div class="relative group-hover:blur-sm delay-200">
+          <img class="w-full rounded-xl" src="/thewast.jpg" alt="heroGym" />
+        </div>
+        <button
+          class="delay-200 ease-in-out group-hover:w-1/2 blur-none group-hover:-translate-y-36 mt-4 text-xl w-1/3 text-black bg-yellow-400 shadow-2xl py-2 rounded-xl font-bold transition-all transform"
+        >
+          Visitar
+        </button>
+      </div>
+    </a>
+    <a href="">
+      <div
+        class="group max-w-sm bg-white px-3 pt-4 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500 flex flex-col items-center relative"
+      >
+        <h3
+          class="mb-3 text-xl font-extrabold text-black text-center group-hover:blur-sm delay-200"
+        >
+          Dashboard Tricode
+        </h3>
+        <div class="relative group-hover:blur-sm delay-200">
+          <img class="w-full rounded-xl" src="/admindashT.jpg" alt="heroGym" />
+        </div>
+        <button
+          class="delay-200 ease-in-out group-hover:w-1/2 blur-none group-hover:-translate-y-36 mt-4 text-xl w-1/3 text-black bg-yellow-400 shadow-2xl py-2 rounded-xl font-bold transition-all transform"
+        >
+          Visitar
+        </button>
+      </div>
+    </a>
+  </div>
+</div>
+
+<style>
+  @keyframes show {
+    from {
+      opacity: 1;
+      scale: 75%;
+    }
+
+    to {
+      opacity: 1;
+      scale: 100%;
+    }
+  }
+  a {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: show;
+
+    animation-range: entry 30% cover 20%;
+    animation-fill-mode: both;
+  }
+</style>

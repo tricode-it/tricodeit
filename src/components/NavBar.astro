@@ -1,13 +1,30 @@
-<header class="bg-white shadow-sm h-18 flex items-center justify-between px-4 md:px-6 lg:px-8 relative">
-  <a href="/" class="flex items-center justify-center logo-navbar">
+<header
+  class="relative bg-transparent h-18 max-w-7xl flex items-center justify-between px-4 md:px-6 lg:px-8 m-auto"
+>
+  <a
+    href="/"
+    class="logo-navbar hover:scale-110 transition-transform transform"
+  >
     TRICODE
   </a>
   <button class="md:hidden text-gray-600 focus:outline-none" id="menu-button">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    <svg
+      class="w-6 h-6"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M4 6h16M4 12h16M4 18h16"></path>
     </svg>
   </button>
-  <nav class="header-links hidden md:flex font-medium text-gray-600 text-base lg:text-md">
+  <nav
+    class="header-links hidden md:flex font-medium text-gray-600 text-base lg:text-md"
+  >
     <ul class="flex items-center ml-4 xl:ml-8 mr-auto">
       <li class="p-3 xl:p-6 active">
         <a href="/">
@@ -36,10 +53,25 @@
       </li>
     </ul>
   </nav>
-  <nav class="header-links-mobile fixed inset-0 flex flex-col items-center justify-center bg-white bg-opacity-95 z-50 hidden">
-    <button class="absolute top-6 right-6 text-gray-600 focus:outline-none" id="menu-close-button">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+  <nav
+    class="header-links-mobile fixed inset-0 flex flex-col items-center justify-center bg-white bg-opacity-95 z-50 hidden"
+  >
+    <button
+      class="absolute top-6 right-6 text-gray-600 focus:outline-none"
+      id="menu-close-button"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"></path>
       </svg>
     </button>
     <ul class="flex flex-col items-center space-y-6">
@@ -74,19 +106,19 @@
 
 <style>
   @font-face {
-    font-family: 'Eras';
+    font-family: "Eras";
     src: url(/font/ITC\ Eras\ Std\ Bold.otf);
     font-weight: bold;
     font-style: bold;
   }
 
   .logo-navbar {
-    font-family: 'Eras';
+    font-family: "Eras";
     font-weight: bold;
     font-style: bold;
     font-size: 30px;
     margin-top: 12px;
-    text-shadow: 2px 2px 4px #ffe600;
+    text-shadow: 2px 2px 4px rgb(250 204 21);
   }
 
   .header-links li span {
@@ -95,7 +127,7 @@
   }
 
   .header-links li span::before {
-    content: '';
+    content: "";
     position: absolute;
     z-index: -1;
     bottom: -2px;
@@ -119,7 +151,7 @@
   }
 
   .header-links-mobile li span::before {
-    content: '';
+    content: "";
     position: absolute;
     z-index: -1;
     bottom: -2px;
@@ -138,36 +170,43 @@
   }
 </style>
 
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const menuButton = document.getElementById('menu-button');
-    const menuCloseButton = document.getElementById('menu-close-button');
-    const mobileMenu = document.querySelector('.header-links-mobile');
-    
-  
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuButton = document.getElementById("menu-button");
+    const menuCloseButton = document.getElementById("menu-close-button");
+    const mobileMenu = document.querySelector(".header-links-mobile");
+
     function setActiveMenu() {
       const currentPath = window.location.pathname;
-      const menuLinks = document.querySelectorAll('.header-links a, .header-links-mobile a');
+      const menuLinks = document.querySelectorAll(
+        ".header-links a, .header-links-mobile a"
+      );
 
-      menuLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        if (href === currentPath) {
-          link.parentElement.classList.add('active');
-        } else {
-          link.parentElement.classList.remove('active');
+      menuLinks.forEach((link) => {
+        const href = link.getAttribute("href");
+        const parentElement = link.parentElement;
+
+        if (href === currentPath && parentElement) {
+          parentElement.classList.add("active");
+        } else if (parentElement) {
+          parentElement.classList.remove("active");
         }
       });
     }
 
-    menuButton.addEventListener('click', () => {
-      mobileMenu.classList.remove('hidden'); 
-      setActiveMenu(); 
-    });
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener("click", () => {
+        mobileMenu.classList.remove("hidden");
+        setActiveMenu();
+      });
+    }
 
-    menuCloseButton.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden'); 
-    });
+    if (menuCloseButton && mobileMenu) {
+      menuCloseButton.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    }
 
-    setActiveMenu(); 
+    setActiveMenu();
   });
 </script>
