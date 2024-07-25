@@ -1,61 +1,69 @@
 <div class="flex flex-col items-center justify-center">
   <div class="flex flex-col items-center mx-auto my-16">
-    <div class="m-auto grid w-full grid-cols-3 lg:grid-cols-4">
-      <div class="flex flex-col items-center">
-        <h3
-          class="text-5xl font-extrabold leading-tight flextext-center text-grey-900"
+    <div class="m-auto grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+      <div class="hover:-translate-y-2 group bg-neutral-50 duration-500 w-44 h-44 flex text-neutral-600 flex-col justify-center items-center relative rounded-xl overflow-hidden shadow-md">
+        <svg
+          viewBox="0 0 200 200"
+          xmlns="http://www.w3.org/2000/svg"
+          class="absolute blur z-10 fill-yellow-400 duration-500 group-hover:blur-none group-hover:scale-105"
         >
-          +<span id="countto1" data-count-to="30"></span>
-        </h3>
-        <p
-          class="text-base font-medium leading-7 text-center text-dark-grey-600"
-        >
-          Proyectos
-        </p>
+          <path
+            transform="translate(100 100)"
+            d="M39.5,-49.6C54.8,-43.2,73.2,-36.5,78.2,-24.6C83.2,-12.7,74.8,4.4,69,22.5C63.3,40.6,60.2,59.6,49.1,64.8C38.1,70,19,61.5,0.6,60.7C-17.9,59.9,-35.9,67,-47.2,61.9C-58.6,56.7,-63.4,39.5,-70,22.1C-76.6,4.7,-84.9,-12.8,-81.9,-28.1C-79,-43.3,-64.6,-56.3,-49.1,-62.5C-33.6,-68.8,-16.8,-68.3,-2.3,-65.1C12.1,-61.9,24.2,-55.9,39.5,-49.6Z"
+          ></path>
+        </svg>
+        <div class="z-20 flex flex-col justify-center items-center">
+          <span id="countto1" data-count-to="34" class="font-bold text-6xl ml-2">0</span>
+          <p class="font-bold">Proyectos</p>
+        </div>
       </div>
-      <div class="flex flex-col items-center">
-        <h3
-          class="text-5xl font-extrabold leading-tight text-center text-dark-grey-900"
+
+      <div class="hover:-translate-y-2 group bg-neutral-50 duration-500 w-44 h-44 flex text-neutral-600 flex-col justify-center items-center relative rounded-xl overflow-hidden shadow-md">
+        <svg
+          viewBox="0 0 200 200"
+          xmlns="http://www.w3.org/2000/svg"
+          class="absolute blur z-10 fill-yellow-400 duration-500 group-hover:blur-none group-hover:scale-105"
         >
-          +<span id="countto2" data-count-to="124"></span>
-        </h3>
-        <p
-          class="text-base font-medium leading-7 text-center text-dark-grey-600"
-        >
-          Seguidores!
-        </p>
+          <path
+            transform="translate(100 100)"
+            d="M39.5,-49.6C54.8,-43.2,73.2,-36.5,78.2,-24.6C83.2,-12.7,74.8,4.4,69,22.5C63.3,40.6,60.2,59.6,49.1,64.8C38.1,70,19,61.5,0.6,60.7C-17.9,59.9,-35.9,67,-47.2,61.9C-58.6,56.7,-63.4,39.5,-70,22.1C-76.6,4.7,-84.9,-12.8,-81.9,-28.1C-79,-43.3,-64.6,-56.3,-49.1,-62.5C-33.6,-68.8,-16.8,-68.3,-2.3,-65.1C12.1,-61.9,24.2,-55.9,39.5,-49.6Z"
+          ></path>
+        </svg>
+        <div class="z-20 flex flex-col justify-center items-center">
+          <span id="countto2" data-count-to="124" class="font-bold text-6xl ml-2">0</span>
+          <p class="font-bold">Seguidores!</p>
+        </div>
       </div>
-      <div class="flex flex-col items-center">
-        <h3
-          class="text-5xl font-extrabold leading-tight text-center text-dark-grey-900"
+
+      <div class="hover:-translate-y-2 group bg-neutral-50 duration-500 w-44 h-44 flex text-neutral-600 flex-col justify-center items-center relative rounded-xl overflow-hidden shadow-md">
+        <svg
+          viewBox="0 0 200 200"
+          xmlns="http://www.w3.org/2000/svg"
+          class="absolute blur z-10 fill-yellow-400 duration-500 group-hover:blur-none group-hover:scale-105"
         >
-          +<span id="countto4" data-count-to="1500"></span>
-        </h3>
-        <p
-          class="text-base font-medium leading-7 text-center text-dark-grey-600"
-        >
-          Web Visitantes diarios
-        </p>
+          <path
+            transform="translate(100 100)"
+            d="M39.5,-49.6C54.8,-43.2,73.2,-36.5,78.2,-24.6C83.2,-12.7,74.8,4.4,69,22.5C63.3,40.6,60.2,59.6,49.1,64.8C38.1,70,19,61.5,0.6,60.7C-17.9,59.9,-35.9,67,-47.2,61.9C-58.6,56.7,-63.4,39.5,-70,22.1C-76.6,4.7,-84.9,-12.8,-81.9,-28.1C-79,-43.3,-64.6,-56.3,-49.1,-62.5C-33.6,-68.8,-16.8,-68.3,-2.3,-65.1C12.1,-61.9,24.2,-55.9,39.5,-49.6Z"
+          ></path>
+        </svg>
+        <div class="z-20 flex flex-col justify-center items-center">
+          <span id="countto3" data-count-to="1500" class="font-bold text-6xl ml-2">0</span>
+          <p class="font-bold">Web Visitantes diarios</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <script>
-  function animateCount(
-    element: HTMLElement,
-    start: number,
-    end: number,
-    duration: number,
-    decimalPlaces: number
-  ) {
+  function animateCount(element, start, end, duration, decimalPlaces) {
     const range = end - start;
     const startTime = performance.now();
 
-    function step(timestamp: number) {
+    function step(timestamp) {
       const progress = Math.min((timestamp - startTime) / duration, 1);
       const current = start + range * progress;
-      element.textContent = current.toFixed(decimalPlaces);
+      element.textContent = '+' + current.toFixed(decimalPlaces);
 
       if (progress < 1) {
         requestAnimationFrame(step);
@@ -69,20 +77,13 @@
     const numbers = document.querySelectorAll("[data-count-to]");
 
     numbers.forEach((number) => {
-      const ID = number.getAttribute("id");
       const value = number.getAttribute("data-count-to");
       const decimalPlaces = number.hasAttribute("data-decimal")
-        ? parseInt(number.getAttribute("data-decimal")!)
+        ? parseInt(number.getAttribute("data-decimal"))
         : 0;
 
-      if (ID && value) {
-        animateCount(
-          number as HTMLElement,
-          0,
-          parseFloat(value),
-          2000,
-          decimalPlaces
-        );
+      if (value) {
+        animateCount(number, 0, parseFloat(value), 2000, decimalPlaces);
       }
     });
   }
