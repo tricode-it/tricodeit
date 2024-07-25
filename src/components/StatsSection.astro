@@ -1,7 +1,11 @@
 <div class="flex flex-col items-center justify-center">
   <div class="flex flex-col items-center mx-auto my-16">
-    <div class="m-auto grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
-      <div class="hover:-translate-y-2 group bg-neutral-50 duration-500 w-44 h-44 flex text-neutral-600 flex-col justify-center items-center relative rounded-xl overflow-hidden shadow-md">
+    <div
+      class="m-auto grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center"
+    >
+      <div
+        class="hover:-translate-y-2 group bg-neutral-50 duration-500 w-44 h-44 flex text-neutral-600 flex-col justify-center items-center relative rounded-xl overflow-hidden shadow-md"
+      >
         <svg
           viewBox="0 0 200 200"
           xmlns="http://www.w3.org/2000/svg"
@@ -13,12 +17,16 @@
           ></path>
         </svg>
         <div class="z-20 flex flex-col justify-center items-center">
-          <span id="countto1" data-count-to="34" class="font-bold text-6xl ml-2">0</span>
+          <span id="countto1" data-count-to="34" class="font-bold text-6xl ml-2"
+            >0</span
+          >
           <p class="font-bold">Proyectos</p>
         </div>
       </div>
 
-      <div class="hover:-translate-y-2 group bg-neutral-50 duration-500 w-44 h-44 flex text-neutral-600 flex-col justify-center items-center relative rounded-xl overflow-hidden shadow-md">
+      <div
+        class="hover:-translate-y-2 group bg-neutral-50 duration-500 w-44 h-44 flex text-neutral-600 flex-col justify-center items-center relative rounded-xl overflow-hidden shadow-md"
+      >
         <svg
           viewBox="0 0 200 200"
           xmlns="http://www.w3.org/2000/svg"
@@ -30,12 +38,18 @@
           ></path>
         </svg>
         <div class="z-20 flex flex-col justify-center items-center">
-          <span id="countto2" data-count-to="124" class="font-bold text-6xl ml-2">0</span>
+          <span
+            id="countto2"
+            data-count-to="124"
+            class="font-bold text-6xl ml-2">0</span
+          >
           <p class="font-bold">Seguidores!</p>
         </div>
       </div>
 
-      <div class="hover:-translate-y-2 group bg-neutral-50 duration-500 w-44 h-44 flex text-neutral-600 flex-col justify-center items-center relative rounded-xl overflow-hidden shadow-md">
+      <div
+        class="hover:-translate-y-2 group bg-neutral-50 duration-500 w-44 h-44 flex text-neutral-600 flex-col justify-center items-center relative rounded-xl overflow-hidden shadow-md"
+      >
         <svg
           viewBox="0 0 200 200"
           xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +61,11 @@
           ></path>
         </svg>
         <div class="z-20 flex flex-col justify-center items-center">
-          <span id="countto3" data-count-to="1500" class="font-bold text-6xl ml-2">0</span>
+          <span
+            id="countto3"
+            data-count-to="1500"
+            class="font-bold text-6xl ml-2">0</span
+          >
           <p class="font-bold">Web Visitantes diarios</p>
         </div>
       </div>
@@ -56,14 +74,20 @@
 </div>
 
 <script>
-  function animateCount(element, start, end, duration, decimalPlaces) {
+  function animateCount(
+    element: HTMLElement,
+    start: number,
+    end: number,
+    duration: number,
+    decimalPlaces: number
+  ) {
     const range = end - start;
     const startTime = performance.now();
 
-    function step(timestamp) {
+    function step(timestamp: number) {
       const progress = Math.min((timestamp - startTime) / duration, 1);
       const current = start + range * progress;
-      element.textContent = '+' + current.toFixed(decimalPlaces);
+      element.textContent = "+" + current.toFixed(decimalPlaces);
 
       if (progress < 1) {
         requestAnimationFrame(step);
@@ -74,15 +98,17 @@
   }
 
   function initCountUp() {
-    const numbers = document.querySelectorAll("[data-count-to]");
+    const numbers = document.querySelectorAll(
+      "[data-count-to]"
+    ) as NodeListOf<HTMLElement>;
 
     numbers.forEach((number) => {
       const value = number.getAttribute("data-count-to");
       const decimalPlaces = number.hasAttribute("data-decimal")
-        ? parseInt(number.getAttribute("data-decimal"))
+        ? parseInt(number.getAttribute("data-decimal") || "0", 10)
         : 0;
 
-      if (value) {
+      if (value !== null) {
         animateCount(number, 0, parseFloat(value), 2000, decimalPlaces);
       }
     });
