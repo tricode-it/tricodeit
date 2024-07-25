@@ -1,71 +1,71 @@
 <section class="pagination-dots fixed bottom-0 left-0 mb-4 ml-4 flex space-x-4">
-    <span class="dot" data-section="home"></span>
-    <span class="dot" data-section="services"></span>
-    <span class="dot" data-section="about"></span>
-    <span class="dot" data-section="projects"></span>
-    <span class="dot" data-section="contact"></span>
+  <span class="dot" data-section="home"></span>
+  <span class="dot" data-section="services"></span>
+  <span class="dot" data-section="about"></span>
+  <span class="dot" data-section="projects"></span>
+  <span class="dot" data-section="contact"></span>
 </section>
 
 <style>
-    .pagination-dots {
-        display: flex;
-        flex-direction: row; 
-        align-items: center;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        margin-bottom: 1rem;
-        margin-left: 1rem;
-        z-index: 1000; 
-    }
+  .pagination-dots {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    z-index: 1000;
+  }
 
-    .dot {
-        width: 16px; 
-        height: 16px;
-        border-radius: 50%;
-        background-color: #000000;
-        transition: background-color 0.3s, width 0.3s, height 0.3s;
-    }
+  .dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #000000;
+    transition:
+      background-color 0.3s,
+      width 0.3s,
+      height 0.3s;
+  }
 
-    .dot.active {
-        background-color: #ffe600;
-    }
+  .dot.active {
+    background-color: #ffe600;
+  }
 </style>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const dots = document.querySelectorAll('.pagination-dots .dot');
+  document.addEventListener("DOMContentLoaded", () => {
+    const dots = document.querySelectorAll(".pagination-dots .dot");
 
-        function updateActiveDot() {
-            const url = window.location.pathname; 
-            let activeDotIndex = -1;
+    function updateActiveDot() {
+      const url = window.location.pathname;
+      let activeDotIndex = -1;
 
-            switch (url) {
-                case '/':
-                    activeDotIndex = 0;
-                    break;
-                case '/services':
-                    activeDotIndex = 1;
-                    break;
-                case '/about':
-                    activeDotIndex = 2;
-                    break;
-                case '/projects':
-                    activeDotIndex = 3;
-                    break;
-                case '/contact':
-                    activeDotIndex = 4;
-                    break;
-                default:
-                    activeDotIndex = -1;
-                    break;
-            }
+      switch (url) {
+        case "/":
+          activeDotIndex = 0;
+          break;
+        case "/services":
+          activeDotIndex = 1;
+          break;
+        case "/about":
+          activeDotIndex = 2;
+          break;
+        case "/contact":
+          activeDotIndex = 3;
+          break;
+        default:
+          activeDotIndex = -1;
+          break;
+      }
 
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === activeDotIndex);
-            });
-        }
+      dots.forEach((dot, index) => {
+        dot.classList.toggle("active", index === activeDotIndex);
+      });
+    }
 
-        updateActiveDot(); 
-    });
+    updateActiveDot();
+  });
 </script>
