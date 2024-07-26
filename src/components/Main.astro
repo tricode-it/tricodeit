@@ -1,6 +1,6 @@
 ---
 import Button1 from "./ui/button/Button1.astro";
-import Button2 from "./ui/button/Button2.astro";
+import Button3 from "./ui/button/Button3.astro";
 import InfiniteScroll from "./ui/InfiniteScroll.astro";
 ---
 
@@ -26,10 +26,12 @@ import InfiniteScroll from "./ui/InfiniteScroll.astro";
       <div class="m-auto">
         <InfiniteScroll />
       </div>
-      <div class="mb-4 flex justify-center space-x-0 md:space-x-2 md:mb-8">
+      <div
+        class="mb-4 flex flex-col md:flex-row md:gap-12 gap-4 justify-center space-x-0 md:space-x-2 md:mb-8 items-center"
+      >
         <Button1 />
+        <Button3 />
       </div>
-        <Button2 />
     </div>
   </div>
 </section>

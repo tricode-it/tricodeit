@@ -28,9 +28,9 @@
     <h1 class="font-bold text-gray-800 drop-shadow-2xl">Apps Mobile</h1>
   </div>
   <div
-    class="rounded-xl p-[2px] text-xl item item4 text-center flex justify-center m-auto gap-2 bg-gradient-to-r from-[#ffe600] to-yellow-400"
+    class="rounded-xl p-[2px] text-xl item item5 text-center flex justify-center m-auto gap-2 bg-gradient-to-r from-[#ffe600] to-yellow-400"
   >
-    <i class='bx bxs-user text-2xl'></i>
+    <i class="bx bxs-user text-2xl"></i>
     <h1 class="font-bold text-gray-800 drop-shadow-2xl">Portafolios</h1>
   </div>
 
@@ -43,6 +43,7 @@
 
     * {
       margin: 0;
+      align-items: center;
     }
 
     .wrapper {
@@ -67,7 +68,7 @@
     .item {
       width: 190px;
       position: absolute;
-      left: max(calc(200px * 3), 100%);
+      left: max(calc(200px * 4), 100%);
       animation-name: scrollLeft;
       animation-duration: 7s;
       animation-timing-function: linear;
@@ -75,19 +76,22 @@
     }
 
     .item1 {
-      animation-delay: calc(7s / 4 * (4 - 1) * -1);
+      animation-delay: calc(7s / 5 * (5 - 1) * -1);
     }
 
     .item2 {
-      animation-delay: calc(7s / 4 * (4 - 2) * -1);
+      animation-delay: calc(7s / 5 * (5 - 2) * -1);
     }
 
     .item3 {
-      animation-delay: calc(7s / 4 * (4 - 3) * -1);
+      animation-delay: calc(7s / 5 * (5 - 3) * -1);
     }
 
     .item4 {
-      animation-delay: calc(7s / 4 * (4 - 4) * -1);
+      animation-delay: calc(7s / 5 * (5 - 4) * -1);
+    }
+    .item5 {
+      animation-delay: calc(7s / 5 * (5 - 5) * -1);
     }
   </style>
 </div>

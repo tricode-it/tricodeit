@@ -1,4 +1,7 @@
 ---
+import Footer from "../components/Footer.astro";
+import WhasappButton from "../components/ui/WhasappButton.astro";
+
 interface Props {
   title: string;
 }
@@ -20,6 +23,10 @@ const { title } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,13 +34,12 @@ const { title } = Astro.props;
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/64d58efce2.js"
-      crossorigin="anonymous"></script>
     <title>{title}</title>
   </head>
   <body>
     <slot />
+    <Footer />
+    <WhasappButton />
   </body>
 </html>
 
