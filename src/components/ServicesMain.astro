@@ -25,16 +25,19 @@ import ServiciosCards from "./ServiciosCards.astro";
       class="service-card rounded-xl w-[300px] shadow-xl cursor-pointer snap-start shrink-0 py-8 px-6 bg-white flex flex-col gap-3 transition-all duration-300 group hover:bg-[#202127]"
     >
       <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
-        fill="#000000"
-        viewBox="0 0 256 256"
-        class="text-5xl h-12 w-12 stroke-gray-800 group-hover:stroke-yellow-400"
-        ><path
-          d="M216,40H72A16,16,0,0,0,56,56V72H40A16,16,0,0,0,24,88V200a16,16,0,0,0,16,16H184a16,16,0,0,0,16-16V184h16a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM184,88v16H40V88Zm0,112H40V120H184v80Zm32-32H200V88a16,16,0,0,0-16-16H72V56H216Z"
-        ></path></svg
-      >
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke-width="2"
+      stroke="#000000"
+      fill="none"
+      viewBox="0 0 24 24"
+      class="text-5xl h-12 w-12 stroke-gray-800 group-hover:stroke-yellow-400"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect ry="2" rx="2" height="14" width="20" y="3" x="2"></rect>
+      <line y2="21" x2="16" y1="21" x1="8"></line>
+      <line y2="21" x2="12" y1="17" x1="12"></line>
+      </svg>
 
       <p class="font-bold text-2xl group-hover:text-white text-black/80">
         WEBSITE SEO

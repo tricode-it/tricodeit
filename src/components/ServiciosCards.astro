@@ -1,46 +1,41 @@
-<section class="h-screen flex flex-col">
-  <div class="text-center space-y-2 mt-20">
-    <p
-      class="mb-8 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight text-center"
-    >
-      Nuestros <span
-        class="bg-gradient-to-r from-amber-300 to-yellow-300 bg-clip-text text-transparent"
-        >Servicios</span
-      >
+<section class="flex flex-col py-10 px-4 md:py-20">
+  <div class="text-center space-y-4 md:space-y-6">
+    <p class="text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-6xl">
+      Nuestros <span class="bg-gradient-to-r from-amber-300 to-yellow-300 bg-clip-text text-transparent">Servicios</span>
     </p>
-    <p class="max-w-[700px] mx-auto text-muted-foreground md:text-xl">
-      Ofrecemos una amplia gama de servicios para satisfacer todas tus
-      necesidades de desarrollo de software.
+    <p class="max-w-3xl mx-auto text-muted-foreground md:text-xl">
+      Ofrecemos una amplia gama de servicios para satisfacer todas tus necesidades de desarrollo de software.
     </p>
   </div>
-  <div class="max-w-7xl m-auto">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-20 w-full">
-      <div class="service-card group">
-        <img src="/thewast.jpg" alt="Servicio 1" />
-        <div class="overlay"></div>
-        <div class="content">
-          <h3 class="title">E-commerce + Dashboard</h3>
-          <p class="description">
-            Descripción breve del servicio 1. Muestra los principales beneficios
-            y características.
-          </p>
+  <div class="max-w-7xl mx-auto mt-10">
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Service Card 1 -->
+      <div class="service-card relative overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
+        <img src="/thewast.jpg" alt="Servicio 1" class="w-full h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-110" />
+        <div class="overlay absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 transition-opacity duration-300 ease-in-out"></div>
+        <div class="content absolute bottom-0 p-4 text-white opacity-0 transition-opacity duration-300 ease-in-out">
+          <h3 class="text-lg font-semibold">E-commerce + Dashboard</h3>
+          <p class="text-sm">Descripción breve del servicio 1. Muestra los principales beneficios y características.</p>
         </div>
-        <a
-          href="#modal1"
-          class="absolute top-4 right-4 text-black hover:text-accent-foreground bg-yellow-500 p-1 rounded-full"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="w-6 h-6"
-          >
+        <a href="#modal1" class="absolute top-4 right-4 text-black hover:text-yellow-600 bg-yellow-500 p-2 rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+          <span class="sr-only">E-commerce + Dashboard</span>
+        </a>
+      </div>
+
+      <!-- Service Card 2 -->
+      <div class="service-card relative overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
+        <img src="/herogym.jpg" alt="Servicio 2" class="w-full h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-110" />
+        <div class="overlay absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 transition-opacity duration-300 ease-in-out"></div>
+        <div class="content absolute bottom-0 p-4 text-white opacity-0 transition-opacity duration-300 ease-in-out">
+          <h3 class="text-lg font-semibold">Landing Page</h3>
+          <p class="text-sm">Descripción breve del servicio 2. Muestra los principales beneficios y características.</p>
+        </div>
+        <a href="#modal2" class="absolute top-4 right-4 text-black hover:text-yellow-600 bg-yellow-500 p-2 rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
             <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
             <circle cx="12" cy="12" r="3"></circle>
           </svg>
@@ -48,290 +43,125 @@
         </a>
       </div>
 
-      <div class="service-card group">
-        <img src="/herogym.jpg" alt="Servicio 2" />
-        <div class="overlay"></div>
-        <div class="content">
-          <h3 class="title">Landing Page</h3>
-          <p class="description">
-            Descripción breve del servicio 2. Muestra los principales beneficios
-            y características.
-          </p>
+      <!-- Service Card 3 -->
+      <div class="service-card relative overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
+        <img src="https://images.vexels.com/media/users/3/210770/raw/251338a9d465357850c03418dafd39f4-diseno-de-maqueta-de-aplicacion-movil.jpg" alt="Servicio 3" class="w-full h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-110" />
+        <div class="overlay absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 transition-opacity duration-300 ease-in-out"></div>
+        <div class="content absolute bottom-0 p-4 text-white opacity-0 transition-opacity duration-300 ease-in-out">
+          <h3 class="text-lg font-semibold">App Mobile</h3>
+          <p class="text-sm">Descripción breve del servicio 3. Muestra los principales beneficios y características.</p>
         </div>
-        <a
-          href="#modal2"
-          class="absolute top-4 right-4 text-black hover:text-accent-foreground bg-yellow-500 p-1 rounded-full"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="w-6 h-6"
-          >
+        <a href="#modal3" class="absolute top-4 right-4 text-black hover:text-yellow-600 bg-yellow-500 p-2 rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
             <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
             <circle cx="12" cy="12" r="3"></circle>
           </svg>
-          <span class="sr-only">APP MOBILE</span>
+          <span class="sr-only">App Mobile</span>
         </a>
       </div>
 
-      <div class="service-card group">
-        <img
-          src="https://images.vexels.com/media/users/3/210770/raw/251338a9d465357850c03418dafd39f4-diseno-de-maqueta-de-aplicacion-movil.jpg"
-          alt="Servicio 3"
-        />
-        <div class="overlay"></div>
-        <div class="content">
-          <h3 class="title">App Mobile</h3>
-          <p class="description">
-            Descripción breve del servicio 3. Muestra los principales beneficios
-            y características.
-          </p>
+      <!-- Service Card 4 -->
+      <div class="service-card relative overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
+        <img src="https://cdn.dribbble.com/userupload/4239355/file/original-1f2da5076926095bf4876131f7d4c24c.jpg?resize=400x0" alt="Servicio 4" class="w-full h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-110" />
+        <div class="overlay absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 transition-opacity duration-300 ease-in-out"></div>
+        <div class="content absolute bottom-0 p-4 text-white opacity-0 transition-opacity duration-300 ease-in-out">
+          <h3 class="text-lg font-semibold">Portafolios</h3>
+          <p class="text-sm">Descripción breve del servicio 4. Muestra los principales beneficios y características.</p>
         </div>
-        <a
-          href="#modal3"
-          class="absolute top-4 right-4 text-black hover:text-accent-foreground bg-yellow-500 p-1 rounded-full"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="w-6 h-6"
-          >
-            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-            <circle cx="12" cy="12" r="3"></circle>
-          </svg>
-          <span class="sr-only">View more</span>
-        </a>
-      </div>
-      <div class="service-card group">
-        <img
-          src="https://cdn.dribbble.com/userupload/4239355/file/original-1f2da5076926095bf4876131f7d4c24c.jpg?resize=400x0"
-          alt="Servicio 1"
-        />
-        <div class="overlay"></div>
-        <div class="content">
-          <h3 class="title">Portafolios</h3>
-          <p class="description">
-            Descripción breve del servicio 1. Muestra los principales beneficios
-            y características.
-          </p>
-        </div>
-        <a
-          href="#modal4"
-          class="absolute top-4 right-4 text-black hover:text-accent-foreground bg-yellow-500 p-1 rounded-full"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="w-6 h-6"
-          >
+        <a href="#modal4" class="absolute top-4 right-4 text-black hover:text-yellow-600 bg-yellow-500 p-2 rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
             <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
             <circle cx="12" cy="12" r="3"></circle>
           </svg>
           <span class="sr-only">Portafolios</span>
         </a>
       </div>
-
-      <!-- Repetir para otros servicios -->
     </div>
 
     <!-- Modal 1 -->
-    <div id="modal1" class="modal">
-      <div class="modal-content">
-        <a href="#" class="close-btn">&times;</a>
-        <h2>E-commerce + AdminDashboard</h2>
-        <p>
-          Descripción detallada del servicio 1 con beneficios y características
-          completos.
-        </p>
-        <button
-          class="px-4 py-2 font-medium text-white bg-yellow-500 rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2"
-          >Lo quiero</button
-        >
-      </div>
-    </div>
-    <div id="modal4" class="modal">
-      <div class="modal-content">
-        <a href="" class="close-btn">&times;</a>
-        <h2>Portafolio</h2>
-        <p>
-          Descripción detallada del servicio 1 con beneficios y características
-          completos.
-        </p>
-        <button
-          class="px-4 py-2 font-medium text-white bg-yellow-500 rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2"
-          >Lo quiero</button
-        >
+    <div id="modal1" class="modal fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+      <div class="modal-content bg-white rounded-lg p-6 max-w-md w-full relative">
+        <a href="#" class="close-btn absolute top-4 right-4 text-gray-600 hover:text-black">&times;</a>
+        <h2 class="text-2xl font-semibold mb-4">E-commerce + Dashboard</h2>
+        <p class="mb-4">Descripción detallada del servicio 1 con beneficios y características completos.</p>
+        <button class="px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2">Lo quiero</button>
       </div>
     </div>
 
     <!-- Modal 2 -->
-    <div id="modal2" class="modal">
-      <div class="modal-content">
-        <a href="#" class="close-btn">&times;</a>
-        <h2>Servicio 2</h2>
-        <p>
-          Descripción detallada del servicio 2 con beneficios y características
-          completos.
-        </p>
-        <button
-          class="px-4 py-2 font-medium text-white bg-yellow-500 rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2"
-          >Lo quiero</button
-        >
+    <div id="modal2" class="modal fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+      <div class="modal-content bg-white rounded-lg p-6 max-w-md w-full relative">
+        <a href="#" class="close-btn absolute top-4 right-4 text-gray-600 hover:text-black">&times;</a>
+        <h2 class="text-2xl font-semibold mb-4">Landing Page</h2>
+        <p class="mb-4">Descripción detallada del servicio 2 con beneficios y características completos.</p>
+        <button class="px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2">Lo quiero</button>
       </div>
     </div>
 
     <!-- Modal 3 -->
-    <div id="modal3" class="modal">
-      <div class="modal-content">
-        <a href="#" class="close-btn">&times;</a>
-        <h2>Servicio 3</h2>
-        <p>
-          Descripción detallada del servicio 3 con beneficios y características
-          completos.
-        </p>
-        <button
-          class="px-4 py-2 font-medium text-white bg-yellow-500 rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2"
-          >Lo quiero</button
-        >
+    <div id="modal3" class="modal fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+      <div class="modal-content bg-white rounded-lg p-6 max-w-md w-full relative">
+        <a href="#" class="close-btn absolute top-4 right-4 text-gray-600 hover:text-black">&times;</a>
+        <h2 class="text-2xl font-semibold mb-4">App Mobile</h2>
+        <p class="mb-4">Descripción detallada del servicio 3 con beneficios y características completos.</p>
+        <button class="px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2">Lo quiero</button>
       </div>
-      <div id="modal3" class="modal">
-        <div class="modal-content">
-          <a href="#" class="close-btn">&times;</a>
-          <h2>Servicio 3</h2>
-          <p>
-            Descripción detallada del servicio 3 con beneficios y
-            características completos.
-          </p>
-          <button
-            class="px-4 py-2 font-medium text-white bg-yellow-500 rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2"
-            >Lo quiero</button
-          >
-        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div id="modal4" class="modal fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+      <div class="modal-content bg-white rounded-lg p-6 max-w-md w-full relative">
+        <a href="#" class="close-btn absolute top-4 right-4 text-gray-600 hover:text-black">&times;</a>
+        <h2 class="text-2xl font-semibold mb-4">Portafolio</h2>
+        <p class="mb-4">Descripción detallada del servicio 4 con beneficios y características completos.</p>
+        <button class="px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2">Lo quiero</button>
       </div>
     </div>
   </div>
-
-  <style>
-    .service-card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 0.75rem;
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .service-card img {
-      width: 100%;
-      height: 16rem;
-      object-fit: cover;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .service-card:hover img {
-      transform: scale(1.1);
-    }
-
-    .service-card .overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
-
-    .service-card:hover .overlay {
-      opacity: 1;
-    }
-
-    .service-card .content {
-      position: absolute;
-      bottom: 0;
-      padding: 1.5rem;
-      color: white;
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
-
-    .service-card:hover .content {
-      opacity: 1;
-    }
-
-    .service-card .title {
-      font-size: 1.25rem;
-      font-weight: 600;
-    }
-
-    .service-card .description {
-      font-size: 0.875rem;
-    }
-
-    .modal {
-      position: fixed;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(0, 0, 0, 0.5);
-      visibility: hidden;
-      opacity: 0;
-      transition:
-        visibility 0s linear 0.3s,
-        opacity 0.3s;
-    }
-
-    .modal:target {
-      visibility: visible;
-      opacity: 1;
-      transition-delay: 0s;
-    }
-
-    .modal .modal-content {
-      background: white;
-      border-radius: 0.75rem;
-      padding: 2rem;
-      max-width: 32rem;
-      width: 100%;
-      position: relative;
-    }
-
-    .modal .modal-content h2 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-
-    .modal .modal-content p {
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .modal .modal-content .close-btn {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-  </style>
 </section>
+
+<style>
+  .service-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-card img {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.05);
+}
+
+  .service-card img {
+    width: 100%;
+    height: 12rem;
+  }
+
+  .modal:target {
+    display: flex;
+  }
+
+  .modal .modal-content {
+    width: 90%;
+  }
+
+  .close-btn {
+    font-size: 1.5rem;
+  }
+
+  .modal {
+  display: none;
+}
+
+  .modal:target {
+    display: flex;
+  }
+
+</style>
