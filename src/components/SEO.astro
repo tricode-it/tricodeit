@@ -1,0 +1,111 @@
+---
+import type { Preload } from '@/types/Preload';
+
+interface Props {
+    title: string;
+    description: string;
+    preload?: Array<Preload>;
+    canonical?: string;
+    image?: string;
+}
+
+const {
+    title,
+    description,
+    preload,
+    canonical,
+    image = "/logotricode.png"
+} = Astro.props as Props;
+
+const determineCanonicalURL = () => {
+    if (Astro.url.host.includes("localhost")) return "http://localhost:4321";
+    return canonical || new URL(Astro.url.pathname, Astro.site).toString();
+}
+
+const canonicalURL = new URL(determineCanonicalURL(), Astro.site);
+
+const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "url": "https://tricode.vercel.app",
+    "image": "https://tricode.vercel.app/logotricode.png",
+    "sameAs": [
+        "https://www.instagram.com/tricode.it",
+        "https://twitter.com/tricode.it"
+    ],
+    "logo": "https://tricode.vercel.app/logotricode.png",
+    "name": "TriCode",
+    "description": "Agencia de desarrollo de software en Concepción, Tucumán, Argentina. Ofrecemos soluciones tecnológicas innovadoras de todo tipo: empresarial, de negocio o personal."
+};
+
+const FAQs = [
+    {
+        question: "¿Qué servicios ofrece TriCode?",
+        answer: "TriCode ofrece servicios de desarrollo de software, diseño web, consultoría tecnológica y más."
+    },
+    {
+        question: "¿Dónde se encuentra ubicada TriCode?",
+        answer: "TriCode está ubicada en Concepción, Tucumán, Argentina."
+    },
+    {
+        question: "¿Cómo puedo contactar a TriCode?",
+        answer: "Puedes contactar a TriCode a través de su formulario de contacto en el sitio web o llamando al +54 9 3865-415222."
+    }
+];
+
+const FAQSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": FAQs.map(({ answer, question }) => ({
+        "@type": "Question",
+        "name": question,
+        "acceptedAnswer": {
+        "@type": "Answer",
+        "text": answer
+        }
+    }))
+};
+---
+
+<title>{title} - TriCode</title>
+
+<meta charset="UTF-8" />
+<meta name="description" content={description} />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+{preload?.map(({ href, as, type, rel = "preload", crossorigin }) => (
+    <link rel={rel} href={href} as={as} type={type} crossorigin={crossorigin} />
+))}
+
+<link rel="canonical" href={canonicalURL} />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#ff3600" />
+
+<meta name="keywords" content="TriCode, desarrollo de software, Concepción, Tucumán, soluciones tecnológicas, innovación" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@tricode.it" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={new URL(image, Astro.site)} />
+
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image, Astro.site)} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:site_name" content="TriCode" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="es_ES" />
+
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow" />
+
+<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/img/icons/apple-touch-icon.png" />
+<link rel="manifest" href="/manifest.webmanifest" />
+<meta name="msapplication-config" content="/browserconfig.xml" />
+
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(FAQSchema)} />

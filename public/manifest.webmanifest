@@ -1,0 +1,27 @@
+{
+    "name": "TriCode",
+    "short_name": "TriCode",
+    "description": "Agencia de desarrollo de software en Concepción, Tucumán, Argentina. Ofrecemos soluciones tecnológicas innovadoras de todo tipo: empresarial, de negocio o personal.",
+    "theme_color": "#ff3600",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "/img/icons/favicon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/img/icons/favicon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "/img/icons/favicon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ]
+  }
+  

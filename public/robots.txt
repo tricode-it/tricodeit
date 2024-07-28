@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Host
+Host: https://tricode.vercel.app
+
+# Sitemaps
+Sitemap: https://tricode.vercel.app/sitemap-index.xml
