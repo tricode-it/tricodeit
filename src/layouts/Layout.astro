@@ -18,12 +18,16 @@ const { title, description, preload, canonical, image } = Astro.props as Props;
 <!doctype html>
 <html lang="es">
   <head>
-    <SEO 
-      title={title} 
-      description={description} 
-      preload={preload} 
-      canonical={canonical} 
-      image={image} 
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <SEO
+      title={title}
+      description={description}
+      preload={preload}
+      canonical={canonical}
+      image={image}
     />
   </head>
   <body class="flex flex-col min-h-screen">
