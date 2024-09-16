@@ -23,6 +23,10 @@ jobs:
       - name: Deploy to server
         run: |
           ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_ed25519 root@78.142.242.7 << 'EOF'
+          export NVM_DIR="$HOME/.nvm"
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # Cargar nvm
+          nvm use 20.17.0 # Seleccionar la versión correcta de Node.js
+          export PATH=$NVM_DIR/versions/node/v20.17.0/bin:$PATH # Asegurar que pm2 esté en el PATH
           cd /root/tricodeit &&
           git pull origin main &&
           npm install &&
