@@ -18,27 +18,18 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.VPS_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan 78.142.242.7 >> ~/.ssh/known_hosts
+          ssh-keyscan -H 78.142.242.7 >> ~/.ssh/known_hosts
 
       - name: Deploy to server
         run: |
-          ssh -i ~/.ssh/id_ed25519 root@78.142.242.7 "
-          export NVM_DIR=\"$HOME/.nvm\"
-          [ -s \"$NVM_DIR/nvm.sh\" ] && \. \"$NVM_DIR/nvm.sh\"
-          nvm use --lts
-          if [ $? -ne 0 ]; then echo 'Failed to switch Node.js version'; exit 1; fi
-
-          export PATH=$PATH:/root/.nvm/versions/node/v20.17.0/bin
-          cd /root/tricodeit
-          git pull origin main
-          if [ $? -ne 0 ]; then echo 'Failed to pull latest code'; exit 1; fi
-
-          npm install
-          if [ $? -ne 0 ]; then echo 'Failed to install dependencies'; exit 1; fi
-
-          npm run build
-          if [ $? -ne 0 ]; then echo 'Failed to build the project'; exit 1; fi
-
+          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_ed25519 root@78.142.242.7 << 'EOF'
+          export NVM_DIR="$HOME/.nvm"
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # Cargar nvm
+          nvm use 20.17.0 # Seleccionar la versión correcta de Node.js
+          export PATH=$NVM_DIR/versions/node/v20.17.0/bin:$PATH # Asegurar que pm2 esté en el PATH
+          cd /root/tricodeit &&
+          git pull origin main &&
+          npm install &&
+          npm run build &&
           pm2 restart tricodeit
-          if [ $? -ne 0 ]; then echo 'Failed to restart PM2 process'; exit 1; fi
-          "
+          EOF
