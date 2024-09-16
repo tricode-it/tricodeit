@@ -22,10 +22,10 @@ jobs:
 
       - name: Deploy to server
         run: |
-          ssh -i ~/.ssh/id_ed25519 root@78.142.242.7 "
+          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_ed25519 root@78.142.242.7 << 'EOF'
           cd /root/tricodeit &&
           git pull origin main &&
           npm install &&
           npm run build &&
           pm2 restart tricodeit
-          "
+          EOF
