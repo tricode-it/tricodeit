@@ -47,10 +47,10 @@ export default function Ecosistema() {
     <div className="flex flex-col px-10 space-y-10 m-auto my-28  md:flex-row items-center justify-center">
       <div className="md:w-1/2 mb-8 md:mb-0">
         <h1 className="text-4xl font-bold mb-4 text-yellow-400">Integración perfecta con tu tecnología</h1>
-        <p className="text-xl mb-6 text-gray-800">
+        <p className="text-xl pl-4 mb-6 text-gray-800">
         Nuestro sistema está diseñado para adaptarse a más de 100 herramientas y plataformas, garantizando una sincronización eficiente con tu stack tecnológico preferido. Deja que nuestro ecosistema impulse tu ecommerce, optimizando cada aspecto de tu tienda para que sea más eficiente y fácil de gestionar.
         </p>
-        <button className="bg-yellow-300 text-black px-6 py-2 rounded-full hover:bg-yellow-400 transition-colors">
+        <button className="bg-yellow-400 text-black py-2 px-4 rounded transform skew-x-[-15deg] hover:opacity-80 transition-opacity">
           Explore nuestro ecosistema
         </button>
       </div>
